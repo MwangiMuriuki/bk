@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">	
+
+<suite thread-count="1" verbose="1" name="bk" annotations="JDK" parallel="tests">
+         
+  <test name="homePage">
+	 <classes>
+	   <class name="homePage.ClassHomePage"/>
+	 </classes>
+   </test>
+   
+  <test name="MegaMenu">
+     <classes>
+       <class name="MegaMenu.MenuNavigation"/>
+     </classes>
+   </test>
+   
+   <test name="onlineBanking">
+     <classes>
+       <class name="onlineBanking.OnlineBanking"/>
+     </classes>
+   </test>
+   
+</suite>
