@@ -24,7 +24,8 @@ public class ClassHomePage {
 	    driver.get("https://www.bk.rw");
 		Thread.sleep(3000);
 	    
-	    
+	    //Hover over the 4 sections on the home page
+		
 	    WebElement openAccount = driver.findElement(By.xpath("/html/body/div[5]/div/div[1]/div/h3"));
         WebElement getLoan = driver.findElement(By.xpath("/html/body/div[5]/div/div[2]/div/h3"));
         WebElement getMortgage = driver.findElement(By.xpath("/html/body/div[5]/div/div[3]/div/h3"));
@@ -50,6 +51,9 @@ public class ClassHomePage {
         mouseHoverCardCenter.perform();
         Thread.sleep(3000);
         
+        
+        // List the links under the Open Account section
+        
         WebElement openAccountList = driver.findElement(By.cssSelector("body > div.container.personal-home-shtcuts > div > div:nth-child(1) > div > ul"));
         List<WebElement> links = openAccountList.findElements(By.tagName("li"));
         System.out.println("The links under the Open Account section are:");
@@ -63,6 +67,9 @@ public class ClassHomePage {
         
         Thread.sleep(3000);
         
+        
+        //Scroll down to the exchange rate section, get the USD values under Buy and Sell
+        
         WebElement buyRate = driver.findElement(By.xpath("/html/body/footer/div[1]/div[4]/div/table/tbody/tr[2]/td[2]"));
         WebElement sellRate = driver.findElement(By.xpath("/html/body/footer/div[1]/div[4]/div/table/tbody/tr[2]/td[3]"));
         
@@ -74,7 +81,6 @@ public class ClassHomePage {
         double sell = Double.parseDouble(s);
         double buy = Double.parseDouble(b);
         
-       
         int SR, BR;
         
          SR = (int) sell;
