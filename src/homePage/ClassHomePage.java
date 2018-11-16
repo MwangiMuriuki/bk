@@ -19,8 +19,11 @@ public class ClassHomePage {
         System.setProperty("webdriver.gecko.driver ", "C:\\Users\\001759\\Documents\\Eclipse\\bk\\geckodriver");
 
 	    WebDriver driver = new FirefoxDriver();
+	    
+    	
 	    driver.get("https://www.bk.rw");
-	    Thread.sleep(3000);
+		Thread.sleep(3000);
+	    
 	    
 	    WebElement openAccount = driver.findElement(By.xpath("/html/body/div[5]/div/div[1]/div/h3"));
         WebElement getLoan = driver.findElement(By.xpath("/html/body/div[5]/div/div[2]/div/h3"));
@@ -92,8 +95,11 @@ public class ClassHomePage {
     
          }
          
-         Thread.sleep(1000);
-      
+         Thread.sleep(3000);
+         System.out.println("Success!");
+ 	     Thread.sleep(3000);
+ 	     driver.close();
+ 	
 	}
 
 }
